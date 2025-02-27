@@ -1,5 +1,46 @@
-$bgcolor: rgb(241, 0, 0);
+@use 'variaveis';
+@use 'hero';
+
+@font-face {
+    font-family: heroic-avenger;
+    src: url(../../assets/fonts/heroic-avenger.ttf);
+} 
+
+@font-face {
+    font-family: heroic;
+    src: url(../../assets/fonts/heroic.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgcolor;
+    background-color: $corDeFundo;
+    font-family: heroic, sans-serif;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: $corTextoSecundario;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
 }
