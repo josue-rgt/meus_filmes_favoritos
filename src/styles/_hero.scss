@@ -1,9 +1,16 @@
 .hero {
-    
     min-height: 105vh;
     background-image: url(../images/avengers-endgame.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        min-height: 59vh;
+    }
+
+    @media (max-width: 320px) {
+        min-height: 26vh;
+    }
    
     &__content {
         min-width: 45%;
@@ -15,6 +22,14 @@
         background-size: 100%;
         background-repeat: no-repeat;
         transition: 1.5s;
+
+        @media (max-width: 768px) {
+            top:33%;
+        }
+
+        @media (max-width: 320px) {
+            top:13%;
+        }
 
         &:hover {
             transform: scale(1.05);

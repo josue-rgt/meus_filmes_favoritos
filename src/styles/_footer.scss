@@ -1,0 +1,22 @@
+@use 'variaveis';
+
+.foot {
+    background-color: variaveis.$corDeFundo;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+   
+    &__text {
+        font-family: studios, sans-serif;
+        font-size: 1.1em;
+        color: variaveis.$corTextoPrincipal;
+
+        @media (max-width: 768px) {
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 320px) {
+            font-size: 0.5em;
+        }
+    }
+}
